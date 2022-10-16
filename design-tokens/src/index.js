@@ -1,9 +1,6 @@
 const path = require("path");
 const { getBrands } = require("./brand");
 
-registerFilter();
-registerFormat();
-
 // dist/scss/globals.scss
 // dist/scss/marca-a/tema-1/dark.scss
 
