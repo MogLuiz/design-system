@@ -11,7 +11,6 @@ function registerConfig({ current, buildPath }) {
           {
             destination: `${current.filename}.css`,
             format: "css/variables",
-            filter: "notIsObject",
           },
         ],
       },
