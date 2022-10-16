@@ -1,5 +1,6 @@
 const path = require("path");
 const { getBrands } = require("./brand");
+const { buildTokens } = require("./build");
 
 // dist/scss/globals.scss
 // dist/scss/marca-a/tema-1/dark.scss
