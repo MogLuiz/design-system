@@ -1,5 +1,5 @@
 {
-  "name": "design-tokens",
+  "name": "@mog-luiz/dsc-design-tokens",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
