@@ -1,8 +1,17 @@
 {
   "name": "@mog-luiz/dsc-design-tokens",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "description": "Biblioteca de tokens do design-system.",
+  "author": "Luiz Henrique - <luizhjramos@outlook.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MogLuiz/design-system"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "node src/index.js",
     "build:dev": "rm -rf dist && node src/index.js"
