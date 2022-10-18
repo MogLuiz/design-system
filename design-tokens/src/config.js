@@ -11,6 +11,7 @@ function registerConfig({ current, buildPath }) {
           {
             destination: `${current.filename}.css`,
             format: "css/variables",
+            filter: "notIsObject",
           },
         ],
       },
@@ -21,13 +22,35 @@ function registerConfig({ current, buildPath }) {
           {
             destination: `${current.filename}.scss`,
             format: "scss/variables",
+            filter: "notIsObject",
+          },
+          {
+            destination: `mixins.scss`,
+            format: "scss/mixin",
+            filter: "isObject",
           },
         ],
       },
     },
   };
 }
+function registerFilter() {
+  StyleDictionaryPackage.registerFilter({
+    name: "isObject",
+    matcher: function (token) {
+      return typeof token.value === "object";
+    },
+  });
+
+  StyleDictionaryPackage.registerFilter({
+    name: "notIsObject",
+    matcher: function (token) {
+      return typeof token.value !== "object";
+    },
+  });
+}
 
 module.exports = {
   registerConfig,
+  registerFilter,
 };
